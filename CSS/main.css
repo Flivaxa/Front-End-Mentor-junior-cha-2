@@ -1,0 +1,185 @@
+/* Start Variables */
+:root {
+--Primary-Gradient-left: hsl(6, 100%, 80%);
+--Primary-Gradient-right: hsl(335, 100%, 65%);
+--Neutral-Pale-Blue: hsl(243, 100%, 93%);
+--Neutral-Grayish-Blue: hsl(229, 7%, 55%);
+--Neutral-Dark-Blue: hsl(228, 56%, 26%);
+--Neutral-Very-Dark-Blue: hsl(229, 57%, 11%);
+--Neutral-Very-Dark-Blue-trans: hsl(229, 57%, 11%, 0.5);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Global Rules */
+body {
+    background-image: url(../images/bg-mobile.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+.container {
+    padding-top: 200px;
+}
+.container main > div:first-child {
+    background-color: var(--Neutral-Dark-Blue);
+    padding: 40px;
+    width: 100%;
+    border-radius: 10px 100px 10px 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px -5px rgb(0 0 0 / 30%);
+}
+.container main > div:first-child img.logo {
+    margin-bottom: 20px;
+}
+.container main > div:first-child .upload {
+    display: flex;
+}
+.container main > div:first-child .upload button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: var(--Neutral-Very-Dark-Blue);
+}
+.container main > div:last-child {
+    background-color: var(--Neutral-Dark-Blue);
+    padding: 30px 30px 80px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px -5px rgb(0 0 0 / 30%);
+}
+.container main > div:last-child p {
+    color: var(--Neutral-Pale-Blue);
+    margin-top: 0;
+}
+.container main > div:last-child p span {
+    font-weight: 700;
+}
+.container main > div:last-child .range {
+    height: 20px;
+    background-color: var(--Neutral-Very-Dark-Blue-trans);
+    border-radius: 10px;
+    position: relative;
+}
+.container main > div:last-child .range .line {
+    position: absolute;
+    width: 75%;
+    height: 16px;
+    background-image: linear-gradient(to right, var(--Primary-Gradient-left), var(--Primary-Gradient-right));
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    position: relative;
+}
+.container main > div:last-child .line::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: var(--Neutral-Pale-Blue);
+    border-radius: 50%;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container main > div:last-child .range > div {
+    position: absolute;
+    top: 30px;
+    color: var(--Neutral-Pale-Blue);
+    font-weight: 700;
+}
+.container main > div:last-child .range > div:last-child {
+    right: 0;
+}
+.container main > div:last-child .range > div span {
+    font-size: 0.9rem;
+} 
+.container main > div:last-child .free-space {
+    position: absolute;
+    bottom: -33.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+.container main > div:last-child .free-space span {
+    display: block;
+    color: var(--Neutral-Grayish-Blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+@media (min-width: 992px) {
+    .container main {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .container main > div:first-child {
+        flex: 1;
+    }
+    .container main > div:last-child {
+        flex: 2;
+        padding-bottom: 60px;
+        text-align: start;
+    }
+    .container main > div:last-child .free-space {
+        left: unset;
+        transform: unset;
+        right: 30px;
+        bottom: unset;
+        top: -40px;
+        border-bottom-right-radius: 0;
+    }
+    .container main > div:last-child .free-space::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 25px;
+        background-color: white;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+        right: 0;
+        bottom: -20px;
+    }
+}
