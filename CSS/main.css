@@ -60,7 +60,10 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 0 20px -5px rgb(0 0 0 / 30%);
 }
-.container main > div:first-child img.logo {
+.container main > div:first-child .logo {
+    margin: 0;
+}
+.container main > div:first-child .logo img {
     margin-bottom: 20px;
 }
 .container main > div:first-child .upload {
